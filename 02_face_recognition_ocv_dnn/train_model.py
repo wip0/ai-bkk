@@ -25,7 +25,7 @@ data = pickle.loads(open(args["embeddings"], "rb").read())
 # encode the labels
 print("[INFO] encoding labels...")
 le = LabelEncoder()
-labels = le.fit_transform(data["names"])
+labels = le.fit_transform(data["labels"])
 
 # train the model used to accept the 128-d embeddings of the face and
 # then produce the actual face recognition
